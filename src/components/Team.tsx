@@ -4,13 +4,13 @@ export function Team() {
       initial: 'S',
       name: 'Sebastien',
       role: 'Founder',
-      description: 'Encuentro oportunidades que no ves. Construyo sistemas.',
+      description: 'Especialista en analítica. Datos complejos a estrategias claras, Construyo sistemas.',
     },
     {
-      initial: 'M',
-      name: 'María',
-      role: 'Strategist',
-      description: 'Especialista en analítica. Datos complejos a estrategias claras.',
+      initial: 'JP',
+      name: 'Jean Pier',
+      role: 'Vibe Coder',
+      description: 'Especialista en programación. Creador de plataformas SaaS con implementaciones profesionales.',
     },
   ];
 
