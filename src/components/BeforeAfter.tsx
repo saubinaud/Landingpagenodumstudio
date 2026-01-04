@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export function BeforeAfter() {
   return (
-    <section className="py-24 sm:py-32 lg:py-40 px-4 sm:px-6 bg-[#030303] relative z-10 overflow-hidden">
+    <section className="py-16 sm:py-32 lg:py-40 px-4 sm:px-6 bg-[#030303] relative z-10 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
@@ -10,14 +10,14 @@ export function BeforeAfter() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16 sm:mb-24"
+          className="text-center mb-12 sm:mb-24"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase tracking-widest">
             Antes <span className="text-gray-700 italic px-4 lowercase">vs</span> Después
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-12 items-stretch">
           {/* Chaos Card - "Estado Actual" */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}

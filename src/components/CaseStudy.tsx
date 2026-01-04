@@ -5,7 +5,7 @@ import { Database, Layout, PartyPopper } from "lucide-react";
 
 export function CaseStudy() {
   return (
-    <section id="case-study" className="py-24 sm:py-32 lg:py-40 px-4 sm:px-6 relative z-10 overflow-hidden">
+    <section id="case-study" className="py-16 sm:py-32 lg:py-40 px-4 sm:px-6 relative z-10 overflow-hidden">
       {/* Background Golden Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#FFD700]/5 rounded-full blur-[120px] pointer-events-none" />
 
