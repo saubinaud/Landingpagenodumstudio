@@ -55,16 +55,16 @@ export function Hero() {
         {/* Main Title */}
         <motion.h1
           variants={itemVariants}
-          className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[0.95] tracking-tight mb-4 sm:mb-6"
+          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-white leading-none tracking-tight mb-6 sm:mb-8"
         >
           TU NEGOCIO ESTÁ <br />
-          <span className="text-gray-600">PERDIENDO DINERO.</span>
+          <span className="text-gray-500">PERDIENDO DINERO.</span>
         </motion.h1>
 
         {/* Subtitle */}
         <motion.h2
           variants={itemVariants}
-          className="text-xl sm:text-3xl md:text-5xl font-light text-white mb-6 sm:mb-8"
+          className="text-lg sm:text-2xl md:text-4xl font-light text-white mb-6 sm:mb-8"
         >
           Nosotros encontramos <span className="text-gold-gradient font-bold italic">dónde.</span>
         </motion.h2>
