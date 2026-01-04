@@ -35,7 +35,7 @@ export function Hero() {
   };
 
   return (
-    <section className="min-h-[100dvh] flex flex-col justify-center items-center pt-24 sm:pt-32 px-4 sm:px-6 relative z-10">
+    <section className="min-h-screen flex flex-col justify-center items-center pt-20 sm:pt-28 px-4 sm:px-6 relative z-10">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -72,7 +72,7 @@ export function Hero() {
         {/* Description */}
         <motion.p
           variants={itemVariants}
-          className="text-sm sm:text-lg text-gray-400 max-w-2xl mx-auto mb-8 sm:mb-12 font-light leading-relaxed px-2 sm:px-0"
+          className="text-sm sm:text-lg text-gray-400 max-w-2xl mx-auto mb-10 sm:mb-14 font-light leading-relaxed px-2 sm:px-0"
         >
           Convertimos negocios caóticos en sistemas que funcionan solos.
           <br className="hidden sm:block" />
