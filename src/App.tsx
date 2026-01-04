@@ -4,6 +4,7 @@ import { Hero } from './components/Hero';
 import { Marquee } from './components/Marquee';
 import { VideoSection } from './components/VideoSection';
 import { Problem } from './components/Problem';
+import { Diferenciadores } from './components/Diferenciadores';
 import { Solution } from './components/Solution';
 import { BeforeAfter } from './components/BeforeAfter';
 import { CaseStudy } from './components/CaseStudy';

@@ -12,28 +12,25 @@ export function Contact() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
-    // 1. Enviar datos al Webhook en segundo plano (sin await)
-    // Usamos 'no-cors' si tienes problemas de CORS, aunque esto limita recibir respuesta, asegura el envío en muchos casos.
-    // Si tu n8n acepta CORS estándar, puedes quitar { mode: 'no-cors' }.
+    // 1. Enviar datos al Webhook en segundo plano
     fetch('https://pallium-n8n.s6hx3x.easypanel.host/webhook/registro-cliente', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(formData),
-    }).catch(err => console.error('Error silencioso webhook:', err));
+    }).catch(err => console.error('Webhook error:', err));
 
     // 2. Construir mensaje y abrir WhatsApp INMEDIATAMENTE
-    // Al no esperar al fetch, el navegador reconoce esto como un clic legítimo y no lo bloquea.
     const message = `Hola! Soy ${formData.name} de ${formData.business}. 
-
+    
 Rubro: ${formData.industry}
 Email: ${formData.email}
 
 Desafío: ${formData.challenge}
 
 Quiero saber más sobre sus sistemas con IA.`;
-    
+
     window.open(`https://wa.me/51981811185?text=${encodeURIComponent(message)}`, '_blank');
   };
 
