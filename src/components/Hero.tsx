@@ -112,16 +112,16 @@ export function Hero() {
         transition={{ duration: 0.8, delay: 1.2, ease: [0.16, 1, 0.3, 1] as const }}
         className="mt-16 sm:mt-24 w-full max-w-5xl mx-auto border-t border-white/10 pt-6 sm:pt-8 pb-8"
       >
-        <div className="grid grid-cols-3 gap-2 sm:gap-8 text-center divide-x divide-white/5">
-          <div className="">
+        <div className="flex flex-row justify-between items-start px-2 sm:px-0 divide-x divide-white/5">
+          <div className="flex-1 text-center">
             <div className="text-2xl sm:text-4xl font-black text-white mb-1">30x</div>
             <div className="text-[8px] sm:text-[10px] uppercase tracking-[0.2em] text-gray-500">ROAS Promedio</div>
           </div>
-          <div className="">
+          <div className="flex-1 text-center">
             <div className="text-2xl sm:text-4xl font-black text-white mb-1">+267%</div>
             <div className="text-[8px] sm:text-[10px] uppercase tracking-[0.2em] text-gray-500">Crecimiento</div>
           </div>
-          <div className="">
+          <div className="flex-1 text-center">
             <div className="text-2xl sm:text-4xl font-black text-white mb-1">110</div>
             <div className="text-[8px] sm:text-[10px] uppercase tracking-[0.2em] text-gray-500">Alumnos</div>
           </div>
