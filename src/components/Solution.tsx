@@ -10,7 +10,7 @@ export function Solution() {
   };
 
   return (
-    <section id="solution" className="py-12 sm:py-16 px-4 sm:px-6 relative z-10 border-t border-white/5">
+    <section id="solution" className="py-16 sm:py-20 px-4 sm:px-6 relative z-10 border-t border-white/5">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div

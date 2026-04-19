@@ -32,7 +32,7 @@ export function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center pt-20 sm:pt-28 px-4 sm:px-6 relative z-10">
+    <section className="min-h-[85vh] flex flex-col justify-center items-center pt-24 sm:pt-32 pb-8 px-4 sm:px-6 relative z-10">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -69,7 +69,7 @@ export function Hero() {
         {/* Description */}
         <motion.p
           variants={itemVariants}
-          className="text-sm sm:text-lg text-gray-400 max-w-2xl mx-auto mb-10 sm:mb-14 font-light leading-relaxed px-2 sm:px-0"
+          className="text-sm sm:text-lg text-gray-400 max-w-2xl mx-auto mb-8 sm:mb-10 font-light leading-relaxed px-2 sm:px-0"
         >
           Convertimos negocios caóticos en sistemas que funcionan solos.
           <br className="hidden sm:block" />
@@ -77,17 +77,16 @@ export function Hero() {
         </motion.p>
 
         {/* Buttons */}
-        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-5 justify-center items-center w-full sm:w-auto">
+        <motion.div variants={itemVariants} className="flex justify-center w-full">
           <motion.button
             whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(255,215,0,0.4)" }}
             whileTap={{ scale: 0.95 }}
             onClick={scrollToContact}
-            className="w-full sm:w-auto group relative px-8 py-3.5 sm:py-4 bg-[#FFD700] text-black font-bold rounded-lg overflow-hidden shadow-[0_0_30px_rgba(255,215,0,0.3)] uppercase tracking-widest text-xs"
+            className="group relative px-10 sm:px-12 py-4 sm:py-5 bg-[#FFD700] text-black font-bold rounded-lg overflow-hidden shadow-[0_0_30px_rgba(255,215,0,0.3)] uppercase tracking-widest text-xs sm:text-sm"
           >
             <span className="relative z-10">Auditar mi Negocio</span>
             <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transition-opacity" />
           </motion.button>
-
         </motion.div>
       </motion.div>
 

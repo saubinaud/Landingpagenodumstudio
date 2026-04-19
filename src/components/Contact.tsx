@@ -33,7 +33,7 @@ export function Contact() {
     }).catch(err => console.error('Webhook error:', err));
 
     // 2. Enviar correo via API
-    fetch('http://95.111.254.27:3005/api/contact', {
+    fetch('https://nodumstudio-api.s6hx3x.easypanel.host/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
