@@ -2,7 +2,10 @@ import { AnimatedCard } from "./ui/AnimatedCard";
 import { motion } from "framer-motion";
 
 export function Solution() {
-  const scrollToContact = () => {
+  const scrollToContact = (source?: string) => {
+    if (source) {
+      window.dispatchEvent(new CustomEvent('contact-source', { detail: source }));
+    }
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -80,6 +83,14 @@ export function Solution() {
             <div className="mt-8 pt-6 border-t border-white/10">
               <span className="text-2xl font-black text-white">$300</span>
               <span className="text-[10px] uppercase tracking-widest text-gray-500 ml-2">/ Mes</span>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => scrollToContact('asesoria-financiera')}
+                className="mt-4 w-full border border-[#10B981]/30 text-[#10B981] px-4 py-3 rounded-lg text-[10px] uppercase tracking-widest font-bold hover:bg-[#10B981] hover:text-black transition-colors"
+              >
+                Más Información
+              </motion.button>
             </div>
           </AnimatedCard>
 

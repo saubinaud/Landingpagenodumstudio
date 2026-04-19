@@ -1,4 +1,4 @@
-import { useState, FormEvent } from 'react';
+import { useState, useEffect, useRef, FormEvent } from 'react';
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -8,23 +8,37 @@ export function Contact() {
     industry: '',
     challenge: '',
   });
+  const sourceRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    const handler = (e: Event) => {
+      sourceRef.current = (e as CustomEvent).detail;
+    };
+    window.addEventListener('contact-source', handler);
+    return () => window.removeEventListener('contact-source', handler);
+  }, []);
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+
+    const payload = { ...formData, source: sourceRef.current || undefined };
 
     // 1. Enviar datos al Webhook de n8n
     fetch('https://pallium-n8n.s6hx3x.easypanel.host/webhook/registro-cliente', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
+      body: JSON.stringify(payload),
     }).catch(err => console.error('Webhook error:', err));
 
-    // 2. Enviar correo a admin@nodumstudio.com via API
+    // 2. Enviar correo via API (admin + Carlos si es financiera)
     fetch('http://95.111.254.27:3005/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
+      body: JSON.stringify(payload),
     }).catch(err => console.error('Email API error:', err));
+
+    // Reset source after submit
+    sourceRef.current = null;
 
     // 3. Construir mensaje y abrir WhatsApp
     const message = `Hola! Soy ${formData.name} de ${formData.business}.

@@ -20,14 +20,15 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post('/api/contact', async (req, res) => {
-  const { name, email, business, industry, challenge } = req.body;
+  const { name, email, business, industry, challenge, source } = req.body;
 
   if (!name || !email || !business || !challenge) {
     return res.status(400).json({ error: 'Faltan campos requeridos' });
   }
 
+  const sourceLabel = source ? ` [${source}]` : '';
   const html = `
-    <h2>Nueva solicitud de contacto - Nodumstudio</h2>
+    <h2>Nueva solicitud de contacto - Nodumstudio${sourceLabel}</h2>
     <table style="border-collapse:collapse;width:100%;max-width:600px;font-family:Arial,sans-serif;">
       <tr>
         <td style="padding:8px 12px;border:1px solid #ddd;font-weight:bold;background:#f9f9f9;">Nombre</td>
@@ -49,15 +50,25 @@ app.post('/api/contact', async (req, res) => {
         <td style="padding:8px 12px;border:1px solid #ddd;font-weight:bold;background:#f9f9f9;">Desafío</td>
         <td style="padding:8px 12px;border:1px solid #ddd;">${challenge}</td>
       </tr>
+      <tr>
+        <td style="padding:8px 12px;border:1px solid #ddd;font-weight:bold;background:#f9f9f9;">Origen</td>
+        <td style="padding:8px 12px;border:1px solid #ddd;">${source || 'General'}</td>
+      </tr>
     </table>
   `;
+
+  // Destinatarios según la fuente
+  const recipients = [process.env.MAIL_TO || 'admin@nodumstudio.com'];
+  if (source === 'asesoria-financiera') {
+    recipients.push('carloszevallos1cc@gmail.com');
+  }
 
   try {
     await transporter.sendMail({
       from: `"Nodumstudio Web" <${process.env.SMTP_USER}>`,
-      to: process.env.MAIL_TO || 'admin@nodumstudio.com',
+      to: recipients.join(', '),
       replyTo: email,
-      subject: `Nueva solicitud: ${name} - ${business}`,
+      subject: `Nueva solicitud${sourceLabel}: ${name} - ${business}`,
       html,
     });
 
