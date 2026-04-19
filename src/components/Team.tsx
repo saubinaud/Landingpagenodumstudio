@@ -1,16 +1,22 @@
 export function Team() {
   const team = [
     {
-      initial: 'S',
-      name: 'Sebastien',
-      role: 'Founder',
+      initial: 'SA',
+      name: 'Sebastien Aubinaud',
+      role: 'CCO',
       description: 'Especialista en analítica. Datos complejos a estrategias claras, Construyo sistemas.',
     },
     {
       initial: 'JP',
-      name: 'Jean Pier',
-      role: 'Vibe Coder',
+      name: 'Jean Pierre Carrion',
+      role: 'CTO',
       description: 'Especialista en programación. Creador de plataformas SaaS con implementaciones profesionales.',
+    },
+    {
+      initial: 'CZ',
+      name: 'Carlos Zevallos',
+      role: 'CFO',
+      description: 'Especialista en finanzas. Gestión financiera estratégica y control de operaciones.',
     },
   ];
 
@@ -22,7 +28,7 @@ export function Team() {
         </h2>
 
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
           {team.map((member, index) => (
             <div
               key={member.name}

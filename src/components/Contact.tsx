@@ -20,8 +20,7 @@ export function Contact() {
     }).catch(err => console.error('Webhook error:', err));
 
     // 2. Enviar correo a admin@nodumstudio.com via API
-    const API_URL = import.meta.env.VITE_API_URL || 'https://api.nodumstudio.com';
-    fetch(`${API_URL}/api/contact`, {
+    fetch('http://95.111.254.27:3005/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
