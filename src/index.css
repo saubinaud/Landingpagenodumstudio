@@ -2111,8 +2111,10 @@
 
 .marquee-content {
   gap: 6rem;
-  min-width: 100%;
-  animation: 40s linear infinite scroll;
+  flex-shrink: 0;
+  min-width: max-content;
+  padding-right: 6rem;
+  animation: 30s linear infinite scroll;
   display: flex;
 }
 
