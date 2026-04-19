@@ -96,7 +96,7 @@ export function Hero() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1.2, ease: [0.16, 1, 0.3, 1] as const }}
-        className="mt-16 sm:mt-24 w-full max-w-5xl mx-auto border-t border-white/10 pt-6 sm:pt-8 pb-8"
+        className="mt-12 sm:mt-16 w-full max-w-5xl mx-auto border-t border-white/10 pt-6 pb-4"
       >
         <div className="flex flex-row justify-between items-start px-2 sm:px-0 divide-x divide-white/5">
           <div className="flex-1 text-center">

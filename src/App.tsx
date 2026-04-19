@@ -65,11 +65,10 @@ export default function App() {
       <Header />
       <Hero />
       <Marquee />
-
       <Problem />
       <Solution />
+      <Diferenciadores />
       <BeforeAfter />
-
       <Process />
       <Team />
       <FAQ />
