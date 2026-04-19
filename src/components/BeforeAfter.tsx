@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export function BeforeAfter() {
   return (
-    <section className="py-16 sm:py-32 lg:py-40 px-4 sm:px-6 bg-[#030303] relative z-10 overflow-hidden">
+    <section className="py-12 sm:py-16 px-4 sm:px-6 bg-[#030303] relative z-10 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
@@ -10,7 +10,7 @@ export function BeforeAfter() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12 sm:mb-24"
+          className="text-center mb-8 sm:mb-14"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase tracking-widest">
             Antes <span className="text-gray-700 italic px-4 lowercase">vs</span> Después

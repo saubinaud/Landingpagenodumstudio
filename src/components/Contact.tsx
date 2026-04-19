@@ -12,18 +12,24 @@ export function Contact() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
-    // 1. Enviar datos al Webhook en segundo plano
+    // 1. Enviar datos al Webhook de n8n
     fetch('https://pallium-n8n.s6hx3x.easypanel.host/webhook/registro-cliente', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
     }).catch(err => console.error('Webhook error:', err));
 
-    // 2. Construir mensaje y abrir WhatsApp INMEDIATAMENTE
-    const message = `Hola! Soy ${formData.name} de ${formData.business}. 
-    
+    // 2. Enviar correo a admin@nodumstudio.com via API
+    const API_URL = import.meta.env.VITE_API_URL || 'https://api.nodumstudio.com';
+    fetch(`${API_URL}/api/contact`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    }).catch(err => console.error('Email API error:', err));
+
+    // 3. Construir mensaje y abrir WhatsApp
+    const message = `Hola! Soy ${formData.name} de ${formData.business}.
+
 Rubro: ${formData.industry}
 Email: ${formData.email}
 
@@ -35,7 +41,7 @@ Quiero saber más sobre sus sistemas con IA.`;
   };
 
   return (
-    <section id="contact" className="py-32 px-6 relative z-10">
+    <section id="contact" className="py-12 sm:py-16 px-6 relative z-10">
       <div className="max-w-6xl mx-auto">
         <div className="premium-card p-12 md:p-20 rounded-[3rem] relative overflow-hidden reveal">
           {/* Decorative Background */}

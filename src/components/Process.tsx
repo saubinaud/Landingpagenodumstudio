@@ -18,11 +18,12 @@ export function Process() {
   ];
 
   return (
-    <section id="process" className="py-32 px-6 border-t border-white/5 relative z-10">
+    <section id="process" className="py-12 sm:py-16 px-6 border-t border-white/5 relative z-10">
       <div className="max-w-4xl mx-auto">
-        <h2 className="reveal text-center text-3xl font-black text-white mb-16 uppercase tracking-widest">
+        <h2 className="reveal text-center text-3xl font-black text-white mb-10 uppercase tracking-widest">
           Cómo Funciona
         </h2>
+
 
         <div className="space-y-0 relative">
           <div className="absolute left-4 top-0 bottom-0 w-px bg-white/10" />

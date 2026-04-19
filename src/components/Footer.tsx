@@ -45,14 +45,6 @@ export function Footer() {
                 </li>
                 <li>
                   <button
-                    onClick={() => scrollToSection('case-study')}
-                    className="hover:text-[#FFD700] transition-colors"
-                  >
-                    Caso de Éxito
-                  </button>
-                </li>
-                <li>
-                  <button
                     onClick={() => scrollToSection('faq')}
                     className="hover:text-[#FFD700] transition-colors"
                   >
@@ -66,10 +58,10 @@ export function Footer() {
             <div>
               <h4 className="text-sm font-bold text-white mb-4 uppercase tracking-wider">Servicios</h4>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li>Transformación Completa</li>
-                <li>Asesoría Continua</li>
-                <li>Análisis con IA</li>
-                <li>Automatización</li>
+                <li>Asesoría Comercial</li>
+                <li>Asesoría Financiera</li>
+                <li>Arquitectura de Negocio</li>
+                <li>Transformación Digital</li>
               </ul>
             </div>
 

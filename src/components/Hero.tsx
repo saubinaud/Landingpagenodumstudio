@@ -5,9 +5,6 @@ export function Hero() {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const scrollToVideo = () => {
-    document.getElementById('video')?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   // Container animation
   const containerVariants = {
@@ -91,17 +88,6 @@ export function Hero() {
             <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-30 transition-opacity" />
           </motion.button>
 
-          <motion.button
-            whileHover={{ scale: 1.05, borderColor: "#FFD700", color: "#FFD700" }}
-            whileTap={{ scale: 0.95 }}
-            onClick={scrollToVideo}
-            className="w-full sm:w-auto px-8 py-3.5 sm:py-4 rounded-lg border border-white/20 text-white font-bold text-xs uppercase tracking-widest transition-colors flex items-center justify-center gap-3"
-          >
-            <span className="w-6 h-6 rounded-full border border-current flex items-center justify-center text-[8px]">
-              ▶
-            </span>
-            Ver Metodología
-          </motion.button>
         </motion.div>
       </motion.div>
 
@@ -120,10 +106,6 @@ export function Hero() {
           <div className="flex-1 text-center">
             <div className="text-2xl sm:text-4xl font-black text-white mb-1">+267%</div>
             <div className="text-[8px] sm:text-[10px] uppercase tracking-[0.2em] text-gray-500">Crecimiento</div>
-          </div>
-          <div className="flex-1 text-center">
-            <div className="text-2xl sm:text-4xl font-black text-white mb-1">110</div>
-            <div className="text-[8px] sm:text-[10px] uppercase tracking-[0.2em] text-gray-500">Alumnos</div>
           </div>
         </div>
       </motion.div>

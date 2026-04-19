@@ -34,16 +34,16 @@ export function Problem() {
   ];
 
   return (
-    <section id="problem" className="py-24 sm:py-32 px-4 sm:px-6 relative z-10">
+    <section id="problem" className="py-12 sm:py-16 px-4 sm:px-6 relative z-10">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16 sm:mb-24 text-center max-w-3xl mx-auto"
+          className="mb-10 sm:mb-14 text-center max-w-3xl mx-auto"
         >
-          <div className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 text-[10px] font-bold uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 text-xs sm:text-sm font-bold uppercase tracking-widest">
             <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
             System Critical Error
           </div>

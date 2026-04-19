@@ -15,11 +15,12 @@ export function Team() {
   ];
 
   return (
-    <section id="about" className="py-32 px-6 relative z-10">
+    <section id="about" className="py-12 sm:py-16 px-6 relative z-10">
       <div className="max-w-6xl mx-auto">
         <h2 className="fade-in text-center text-2xl sm:text-3xl font-bold text-white mb-12 sm:mb-16 uppercase tracking-widest">
           El Equipo
         </h2>
+
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
           {team.map((member, index) => (

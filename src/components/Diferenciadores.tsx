@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export function Diferenciadores() {
     return (
-        <section className="py-24 sm:py-32 lg:py-40 px-4 sm:px-6 relative z-10">
+        <section className="py-12 sm:py-16 px-4 sm:px-6 relative z-10">
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
                 <motion.div
@@ -10,7 +10,7 @@ export function Diferenciadores() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                    className="text-center mb-16 sm:mb-24"
+                    className="text-center mb-10 sm:mb-14"
                 >
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white italic leading-tight">
                         Lo que nos diferencia

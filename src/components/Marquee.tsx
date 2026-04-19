@@ -5,6 +5,7 @@ export function Marquee() {
     'Studio Pro',
     'Nodum Partners',
     'Elite Growth',
+    'Nexora',
   ];
 
   return (

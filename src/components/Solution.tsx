@@ -7,7 +7,7 @@ export function Solution() {
   };
 
   return (
-    <section id="solution" className="py-16 sm:py-32 px-4 sm:px-6 relative z-10 border-t border-white/5">
+    <section id="solution" className="py-12 sm:py-16 px-4 sm:px-6 relative z-10 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -15,7 +15,7 @@ export function Solution() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-16 sm:mb-20 text-center md:text-left"
+          className="mb-10 sm:mb-14 text-center md:text-left"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4">LA SOLUCIÓN</h2>
           <p className="text-sm sm:text-base text-gray-400">
@@ -23,42 +23,71 @@ export function Solution() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 items-start">
 
-          {/* Card 1: Asesoría (Entry) */}
+          {/* Card 1: Asesoría Comercial */}
           <AnimatedCard
             delay={0.1}
             glowColor="#3B82F6"
             className="p-8 flex flex-col justify-between h-full min-h-[400px]"
           >
             <div>
-              <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Asesoría Continua</h3>
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Asesoría Comercial</h3>
               <p className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-500 mb-6">
-                Soporte Mensual + IA
+                Estrategia de Ventas
               </p>
               <ul className="space-y-4 text-xs sm:text-sm text-gray-400">
                 <li className="flex items-center gap-3">
-                  <span className="text-[#3B82F6]">+</span> Análisis mensual con IA
+                  <span className="text-[#3B82F6]">+</span> Estrategia comercial personalizada
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-[#3B82F6]">+</span> Recomendaciones data-driven
+                  <span className="text-[#3B82F6]">+</span> Optimización de procesos de venta
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-[#3B82F6]">+</span> Soporte técnico prioritario
+                  <span className="text-[#3B82F6]">+</span> Análisis de mercado y competencia
                 </li>
               </ul>
             </div>
             <div className="mt-8 pt-6 border-t border-white/10">
-              <span className="text-2xl font-black text-white">S/. 800</span>
+              <span className="text-2xl font-black text-white">$350</span>
               <span className="text-[10px] uppercase tracking-widest text-gray-500 ml-2">/ Mes</span>
             </div>
           </AnimatedCard>
 
-          {/* Card 2: Transformación (Main/Featured) */}
+          {/* Card 2: Asesoría Financiera */}
           <AnimatedCard
             delay={0.2}
+            glowColor="#10B981"
+            className="p-8 flex flex-col justify-between h-full min-h-[400px]"
+          >
+            <div>
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Asesoría Financiera</h3>
+              <p className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-500 mb-6">
+                Control Financiero
+              </p>
+              <ul className="space-y-4 text-xs sm:text-sm text-gray-400">
+                <li className="flex items-center gap-3">
+                  <span className="text-[#10B981]">+</span> Cashflow management
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-[#10B981]">+</span> P&L (Profit & Loss)
+                </li>
+                <li className="flex items-center gap-3">
+                  <span className="text-[#10B981]">+</span> Proyecciones y presupuestos
+                </li>
+              </ul>
+            </div>
+            <div className="mt-8 pt-6 border-t border-white/10">
+              <span className="text-2xl font-black text-white">$300</span>
+              <span className="text-[10px] uppercase tracking-widest text-gray-500 ml-2">/ Mes</span>
+            </div>
+          </AnimatedCard>
+
+          {/* Card 3: Arquitectura de Sistema de Negocio + Transformación Digital (Featured) */}
+          <AnimatedCard
+            delay={0.3}
             glowColor="#FFD700"
-            className="p-8 sm:p-10 relative border-[#FFD700]/30 h-full min-h-[450px]"
+            className="p-8 sm:p-10 relative border-[#FFD700]/30 h-full min-h-[450px] lg:col-span-2"
           >
             <div className="absolute top-0 right-0 p-4">
               <span className="bg-[#FFD700] text-black px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">
@@ -67,31 +96,31 @@ export function Solution() {
             </div>
 
             <h3 className="text-2xl sm:text-3xl font-black text-white mb-2">
-              Transformación
+              Arquitectura de Sistema de Negocio
             </h3>
             <p className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-500 mb-8">
-              Programa 8 Semanas
+              Transformación Digital
             </p>
 
             <ul className="space-y-4 text-xs sm:text-sm text-gray-300 mb-10">
               <li className="flex items-center gap-3">
-                <span className="text-[#FFD700]">✓</span> Análisis profundo de datos
+                <span className="text-[#FFD700]">✓</span> Creación de arquitectura de sistema de negocio
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-[#FFD700]">✓</span> Web de alta conversión
+                <span className="text-[#FFD700]">✓</span> Transformación digital completa
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-[#FFD700]">✓</span> CRM + Email Marketing IA
+                <span className="text-[#FFD700]">✓</span> Infraestructura escalable con IA
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-[#FFD700]">✓</span> Infraestructura escalable
+                <span className="text-[#FFD700]">✓</span> Automatización de procesos
               </li>
             </ul>
 
             <div className="mt-auto border-t border-white/10 pt-8">
               <div className="flex items-end gap-2 mb-6">
-                <span className="text-4xl font-black text-white">S/. 2,500</span>
-                <span className="text-[10px] uppercase tracking-widest text-gray-500 mb-1.5">Único</span>
+                <span className="text-sm uppercase tracking-widest text-gray-400">Desde</span>
+                <span className="text-4xl font-black text-white">$1,000</span>
               </div>
 
               <motion.button
@@ -102,44 +131,6 @@ export function Solution() {
               >
                 Empezar Ahora
               </motion.button>
-            </div>
-          </AnimatedCard>
-
-          {/* Card 3: Custom Solutions (NEW) */}
-          <AnimatedCard
-            delay={0.3}
-            glowColor="#FFFFFF"
-            className="p-8 flex flex-col justify-between h-full min-h-[400px] border-white/20 bg-white/[0.03]"
-          >
-            <div>
-              <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Software a Medida</h3>
-              <p className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-500 mb-6">
-                Desarrollo SaaS & Apps
-              </p>
-              <ul className="space-y-4 text-xs sm:text-sm text-gray-400">
-                <li className="flex items-center gap-3">
-                  <span className="text-white">→</span> Plataformas SaaS propias
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-white">→</span> Automatización compleja
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-white">→</span> Integraciones API a medida
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="text-white">→</span> Paneles de control internos
-                </li>
-              </ul>
-            </div>
-            <div className="mt-8 pt-6 border-t border-white/10">
-              <span className="text-xl font-bold text-white">Personalizado</span>
-              <p className="text-[10px] text-gray-500 mt-1">Cotización según proyecto</p>
-              <button
-                onClick={scrollToContact}
-                className="mt-4 w-full border border-white/20 text-white px-4 py-3 rounded-lg text-[10px] uppercase tracking-widest font-bold hover:bg-white hover:text-black transition-colors"
-              >
-                Cotizar
-              </button>
             </div>
           </AnimatedCard>
 
