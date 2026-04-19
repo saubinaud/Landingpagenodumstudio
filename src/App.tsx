@@ -4,7 +4,7 @@ import { Hero } from './components/Hero';
 import { Marquee } from './components/Marquee';
 
 import { Problem } from './components/Problem';
-import { Diferenciadores } from './components/Diferenciadores';
+
 import { Solution } from './components/Solution';
 import { BeforeAfter } from './components/BeforeAfter';
 
@@ -67,7 +67,6 @@ export default function App() {
       <Marquee />
       <Problem />
       <Solution />
-      <Diferenciadores />
       <BeforeAfter />
       <Process />
       <Team />
